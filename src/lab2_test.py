@@ -19,7 +19,7 @@ class DiscreteEventTest(unittest.TestCase):
             [{'Red': False, 'Yellow': False, 'Green': True}, {'Red': True, 'Yellow': False, 'Green': False}]
         ]
         for x in range(len(test_data)):
-
+#
 
             test = DiscreteEvent(input=test_data[x])
 

@@ -1,8 +1,8 @@
 ## Laboratory 1
 ### list of group members:
-Name:Chen ZhengHui  id:192050190
+Name: Chen ZhengHui  id:192050190
 
-Name:Li Xiang  id:192050189
+Name: Li Xiang  id:192050189
 
 ### laboratory work number:
 variant3

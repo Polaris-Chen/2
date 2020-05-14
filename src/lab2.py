@@ -17,7 +17,7 @@ class DiscreteEvent(object):
     #bencause moore FSM 's state is independent with input,so we can create all state nodes
     def create_state(self):
         nodes = []
-
+##
         #A:Green B:Red
         nodes.append(Node(name="A:Green B:Red", time=25, colorA={'Red': False, 'Yellow': False, 'Green': True},
                       colorB={'Red': True, 'Yellow': False, 'Green': False}))
