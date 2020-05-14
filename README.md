@@ -1,4 +1,4 @@
-## Laboratory 1
+## Laboratory 2
 ### list of group members:
 Name: Chen ZhengHui  id:192050190
 
