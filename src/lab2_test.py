@@ -1,17 +1,17 @@
 import unittest
-from lab2 import *
+from src.lab2 import *
 
 
 class DiscreteEventTest(unittest.TestCase):
 
     def test_execute(self):
         test_data = [
-            5, 10, 20, 40, 60, 65,70,95
+            5, 10, 30, 40, 60, 65,70,95
         ]
         result_data = [
             [{'Red': False, 'Yellow': False, 'Green': True}, {'Red': True, 'Yellow': False, 'Green': False}],
             [{'Red': False, 'Yellow': False, 'Green': True}, {'Red': True, 'Yellow': False, 'Green': False}],
-            [{'Red': False, 'Yellow': False, 'Green': True}, {'Red': True, 'Yellow': False, 'Green': False}],
+            [{'Red': False, 'Yellow': True, 'Green': False}, {'Red': True, 'Yellow': False, 'Green': False}],
             [{'Red': True, 'Yellow': False, 'Green': False}, {'Red': False, 'Yellow': False, 'Green': True}],
             [{'Red': True, 'Yellow': False, 'Green': False}, {'Red': False, 'Yellow': False, 'Green': True}],
             [{'Red': True, 'Yellow': False, 'Green': False}, {'Red': False, 'Yellow': True, 'Green': False}],
