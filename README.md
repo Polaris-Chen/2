@@ -18,11 +18,11 @@
 #### state_history is a list ,means the history states
 
 ## method Description:
-#### add_state(self,state_name,length_of_time,colorA,colorB) 
-#### this method have four parameter and used to create a state node ,
-#### state_name is a string parameter means state description
-#### length_of_time is a int parameter means how long this state will sustain
-#### colorA and colorB is a dict means the color of light in A and B direction 
+##### add_state(self,state_name,length_of_time,colorA,colorB) 
+##### this method have four parameter and used to create a state node ,
+##### state_name is a string parameter means state description
+##### length_of_time is a int parameter means how long this state will sustain
+##### colorA and colorB is a dict means the color of light in A and B direction 
 
 #### create_all_states(self)
 this method is used to create all possible states,because Moore FSM's states independent of input,so we want to create
