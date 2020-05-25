@@ -1,6 +1,6 @@
 ## Laboratory 2
 
-## model Description
+## test model Description
 #### There are two traffic lights A,B at an intersection
 #### The red light lasts for 35 seconds, the green light lasts for 30 seconds,
 #### The green light will blink in the last five seconds,
@@ -9,12 +9,12 @@
 # state graph
 ![state graph](src/light.jpg)
 
-#### there are two class FSM class and Node class,Node class define the state which include state name,length of time and color
-#### FSM class have attribute:
-#### states is a list to store all states
-#### statenum is a int means now in which state
-#### remaining_time is input ,means how long will sustain
-#### outputColor is output,means what color is after remaining_time
+
+#### FSM_interpreter class have attribute:
+#### statesList is a list to store all states
+#### stateNum is a int means now in which state
+#### input ,means a num of input 
+#### output means what final states is 
 #### state_history is a list ,means the history states
 
 ## method Description:
