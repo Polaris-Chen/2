@@ -1,13 +1,10 @@
 ## Laboratory 2
 
-## test model Description
-#### There are two traffic lights A,B at an intersection
-#### The red light lasts for 35 seconds, the green light lasts for 30 seconds,
-#### The green light will blink in the last five seconds,
-#### And the yellow light lasts for 5 seconds
 
-# state graph
-![state graph](src/light.jpg)
+
+
+
+
 
 
 #### FSM_interpreter class have attribute:
@@ -38,6 +35,14 @@ this method is used to execute the FSM and get the output state
 #### showHistory(self)
 this method is used to display the history states
 ***
+## test model Description
+#### There are two traffic lights A,B at an intersection
+#### The red light lasts for 35 seconds, the green light lasts for 30 seconds,
+#### The green light will blink in the last five seconds,
+#### And the yellow light lasts for 5 seconds
+
+# state graph
+![state graph](src/light.jpg)
 
 ### list of group members:
 Name: Chen ZhengHui  id:192050190
