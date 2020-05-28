@@ -43,7 +43,7 @@ this method is used to display the history states
 
 # state graph
 ![state graph](src/light.jpg)
-
+![state graph](src/find_longest_word.png)
 ### list of group members:
 Name: Chen ZhengHui  id:192050190
 
