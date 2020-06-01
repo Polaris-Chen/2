@@ -1,6 +1,6 @@
 
 
-from src.Aspect_of_ChangeState import Judge_if_change_state
+from src.Aspect_of_ChangeState import Judge_if_change_state, Execute
 
 
 class FSMInterpreter(object):
@@ -34,40 +34,13 @@ class FSMInterpreter(object):
 
 
     def execute(self):
+        execute = Execute(FSM=self)
         if self.typeNum==1:    #traffic light
-            flag=True
-            while flag:
-                flag=self.changeState()
-            return self.output
+            return execute.traffic_light()
 
         elif self.typeNum==2:  #find_longest_word
-
-            self.stateNum+=1
-            length=len(self.input)
-            maxLength=0
-            str=self.input
-            flag=True
-            for x in range(length): #look all char of a string
-                self.input=str[x]
-                flag=self.changeState()
-
-                if flag:
-                    maxLength+=1
-                    #print(maxLength)
-                else:
-                    if self.output<maxLength:
-
-                        self.output=maxLength
-                        maxLength=0
-                    else :
-                        maxLength=0
-
-            if maxLength > 0 :
-                 self.output=maxLength
-
-            return self.output
-
-
+            return execute.find_longest_word()
+    #will return output
 
     def showHistory(self):
         print("state_history")

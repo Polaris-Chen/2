@@ -4,7 +4,38 @@ from src.FSM_interpreter import *
 
 class FSMTest(unittest.TestCase):
 
-    def test_light(self):
+    def test_add_state(self):
+        fsm = FSMInterpreter()
+        fsm.add_state(stateNode(name="test",rule="do some test",state=[]))
+        self.assertEqual(fsm.statesList[0].name,"test")
+        self.assertEqual(fsm.statesList[0].rule, "do some test")
+
+    def test_changeState(self):
+        fsm = FSMInterpreter(typeNumber=1)
+        list = [
+            stateNode(name="A:Green B:Red", rule="input-25>=0 ",
+                      state=[{'Red': False, 'Yellow': False, 'Green': True},
+                             {'Red': True, 'Yellow': False,'Green': False}])
+
+            , stateNode(name="A:blinking Green B:Red", rule=" input-30>=0 ",
+                        state=[{'Red': False, 'Yellow': False, 'Green': True},
+                               {'Red': True, 'Yellow': False, 'Green': False}])
+            , stateNode(name="A:Yellow B:Red", rule="input-35>=0  ",
+                        state=[{'Red': False, 'Yellow': True, 'Green': False},
+                               {'Red': True, 'Yellow': False, 'Green': False}])
+            ]
+        for x in list:
+            fsm.add_state(x)
+
+        fsm.input=26
+        fsm.changeState()
+        self.assertEqual(fsm.stateNum,1)
+        self.assertEqual(fsm.statesList[fsm.stateNum].name,"A:blinking Green B:Red")
+
+
+
+
+    def test_execute_light(self):
         fsm = FSMInterpreter(typeNumber=1)
         list = [
             stateNode(name="A:Green B:Red", rule="input-25>=0 ",
@@ -54,7 +85,8 @@ class FSMTest(unittest.TestCase):
             self.assertEqual(fsm.execute().state,result_data[x])
 
 
-    def test_find_longest_word(self):
+
+    def test_execute_find_longest_word(self):
         list = [
             stateNode(name="INIT", rule="input.isalpha()"),
             stateNode(name="JUDGE", rule="input.isalpha()"),
@@ -77,5 +109,5 @@ class FSMTest(unittest.TestCase):
         for x in range(len(test_data)):
             fsm.clear()
             fsm.input = test_data[x]
-            #print(fsm.input)
             self.assertEqual(fsm.execute(),result_data[x])
+
